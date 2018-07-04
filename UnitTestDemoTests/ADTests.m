@@ -9,6 +9,9 @@
 #import <XCTest/XCTest.h>
 #import "ADTestsModel.h"
 #import "ADBaseRequest.h"
+#import "Movie.h"
+#import "Demand.h"
+#import "Customer.h"
 
 //waitForExpectationsWithTimeout是等待时间，超过了就不再等待往下执行。
 #define WAIT do {\
@@ -184,5 +187,38 @@
 //
 //    XCTAssertNoThrowSpecificNamed(expression, specificException, exception_name, format...) 异常测试，当expression没有发生具体异常、具体异常名称的异常时通过测试，反之不通过
 }
+
+//测试工作日电影费用、积分计算逻辑
+- (void)testRegularStatement {
+    Movie *movie = [[Movie alloc] initWithTitle:@"黑客帝国2" priceCode:MovieEnumRegular];
+    Demand *demand = [[Demand alloc] initWithMovie:movie timePeriod:TimePeriodEnumWorkDaytime];
+    Customer *customer = [[Customer alloc] initCustomerWithName:@"阿杜"];
+    [customer addDemand:demand];
+    XCTAssertTrue([@"阿杜的点播清单\\\\n"
+                   @"\\\\t黑客帝国2\\\\t2 元\\\\n"
+                   @"费用总计 2 元\\\\n"
+                   @"获得积分 1"
+                   isEqualToString:[customer statement]],
+                  @"测试点播一部普通电影");
+}
+
+//测试周末电影费用、积分计算逻辑
+- (void)testWeekendStatement {
+    Movie *movie = [[Movie alloc] initWithTitle:@"阿凡达" priceCode:MovieEnumRegular];
+    Demand *demand = [[Demand alloc] initWithMovie:movie timePeriod:TimePeriodEnumWeekend];
+    Customer *customer = [[Customer alloc] initCustomerWithName:@"Adu"];
+    [customer addDemand:demand];
+    XCTAssertTrue([@"Adu的点播清单\\\\n"
+                   @"\\\\t阿凡达\\\\t1 元\\\\n"
+                   @"费用总计 1 元\\\\n"
+                   @"获得积分 1"
+                   isEqualToString:[customer statement]],
+                  @"测试点播一部普通电影，周末半价");
+}
+
+
+
+
+
 
 @end

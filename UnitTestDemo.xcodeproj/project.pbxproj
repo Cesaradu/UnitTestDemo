@@ -16,6 +16,9 @@
 		A7359E3020EB585300A1778D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7359E2F20EB585300A1778D /* main.m */; };
 		A7359E4520EB5B0400A1778D /* ADTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7359E4420EB5B0400A1778D /* ADTests.m */; };
 		A7359E4D20EB73D900A1778D /* ADTestsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A7359E4C20EB73D900A1778D /* ADTestsModel.m */; };
+		A7F6A67D20EC9CA500DEA2B0 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F6A67C20EC9CA500DEA2B0 /* Movie.m */; };
+		A7F6A68020EC9DB200DEA2B0 /* Demand.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F6A67F20EC9DB200DEA2B0 /* Demand.m */; };
+		A7F6A68320EC9EC200DEA2B0 /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F6A68220EC9EC200DEA2B0 /* Customer.m */; };
 		BA0F2616C9E4024AB7870D9E /* libPods-UnitTestDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C3A4F5583DBE6DC8D101BA /* libPods-UnitTestDemo.a */; };
 		E99760AE7CA912997B21C2E2 /* libPods-UnitTestDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B7CA86CE990592EAF3AC56 /* libPods-UnitTestDemoTests.a */; };
 /* End PBXBuildFile section */
@@ -51,6 +54,12 @@
 		A7359E4420EB5B0400A1778D /* ADTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADTests.m; sourceTree = "<group>"; };
 		A7359E4B20EB73D900A1778D /* ADTestsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADTestsModel.h; sourceTree = "<group>"; };
 		A7359E4C20EB73D900A1778D /* ADTestsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADTestsModel.m; sourceTree = "<group>"; };
+		A7F6A67B20EC9CA500DEA2B0 /* Movie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		A7F6A67C20EC9CA500DEA2B0 /* Movie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		A7F6A67E20EC9DB200DEA2B0 /* Demand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demand.h; sourceTree = "<group>"; };
+		A7F6A67F20EC9DB200DEA2B0 /* Demand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demand.m; sourceTree = "<group>"; };
+		A7F6A68120EC9EC200DEA2B0 /* Customer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Customer.h; sourceTree = "<group>"; };
+		A7F6A68220EC9EC200DEA2B0 /* Customer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Customer.m; sourceTree = "<group>"; };
 		A8C3A4F5583DBE6DC8D101BA /* libPods-UnitTestDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UnitTestDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C55868E139D401BA51D2F0 /* Pods-UnitTestDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UnitTestDemo/Pods-UnitTestDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F8B7CA86CE990592EAF3AC56 /* libPods-UnitTestDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UnitTestDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +123,12 @@
 				A7359E2420EB585200A1778D /* ViewController.m */,
 				A7359E4B20EB73D900A1778D /* ADTestsModel.h */,
 				A7359E4C20EB73D900A1778D /* ADTestsModel.m */,
+				A7F6A67B20EC9CA500DEA2B0 /* Movie.h */,
+				A7F6A67C20EC9CA500DEA2B0 /* Movie.m */,
+				A7F6A67E20EC9DB200DEA2B0 /* Demand.h */,
+				A7F6A67F20EC9DB200DEA2B0 /* Demand.m */,
+				A7F6A68120EC9EC200DEA2B0 /* Customer.h */,
+				A7F6A68220EC9EC200DEA2B0 /* Customer.m */,
 				A7359E2620EB585300A1778D /* Main.storyboard */,
 				A7359E2920EB585300A1778D /* Assets.xcassets */,
 				A7359E2B20EB585300A1778D /* LaunchScreen.storyboard */,
@@ -288,10 +303,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7F6A68020EC9DB200DEA2B0 /* Demand.m in Sources */,
 				A7359E4D20EB73D900A1778D /* ADTestsModel.m in Sources */,
 				A7359E2520EB585200A1778D /* ViewController.m in Sources */,
+				A7F6A67D20EC9CA500DEA2B0 /* Movie.m in Sources */,
 				A7359E3020EB585300A1778D /* main.m in Sources */,
 				A7359E2220EB585200A1778D /* AppDelegate.m in Sources */,
+				A7F6A68320EC9EC200DEA2B0 /* Customer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
